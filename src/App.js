@@ -1,12 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import welcomeIcon from './assets/welcome.jpg';
 
-class App extends Component {
-  render() {
-    return (
-      <img src={welcomeIcon} alt="Welcome!"/>
-    );
-  }
-}
+const App = () => (
+  <img src={welcomeIcon} alt="Welcome!" />
+);
 
 export default App;
