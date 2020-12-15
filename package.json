@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "classnames": "^2.2.6",
     "json-server": "^0.16.2",
     "node-sass": "^4.9.4",
     "react": "^16.12.0",
@@ -15,7 +16,8 @@
     "start": "PORT=3001 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eslint": "node_modules/eslint/bin/eslint.js ."
+    "eslint": "node_modules/eslint/bin/eslint.js . --ext .ts --ext .tsx",
+    "tsc": "tsc --watch"
   },
   "eslintConfig": {
     "extends": "react-app"

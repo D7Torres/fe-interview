@@ -1,0 +1,40 @@
+@value CleoBlue: #0029f4;
+@value CleoBlueBright1: #335cff;
+@value CleoBlueBright2: #668fff;
+
+.tabsWrapper{
+  max-width: 700px;
+}
+
+.tabs {
+  border-bottom: 2px solid CleoBlue;
+}
+
+.tab {
+  /* Remove default button styles */
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  border: 0;
+
+  background: CleoBlueBright2;
+  padding: 15px;
+}
+
+.tab:hover {
+  background-color: CleoBlueBright1;
+  color: white;
+}
+
+.tab.tabSelected { /* Overrieds .tab:hover with higher specificity */
+  background-color: CleoBlue;
+  color: white;
+  font-weight: bold;
+}
+
+.contentWrapper {
+  padding: 15px;
+}

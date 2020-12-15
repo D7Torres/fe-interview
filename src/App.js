@@ -1,8 +1,11 @@
 import React from 'react';
-import welcomeIcon from './assets/welcome.jpg';
+import Tabs from './components/Tabs/Tabs.tsx';
 
 const App = () => (
-  <img src={welcomeIcon} alt="Welcome!" />
+  <Tabs tabNames={['Bills', 'Transactions']}>
+    <div>Tab 1 content</div>
+    <div>Tab 2 content</div>
+  </Tabs>
 );
 
 export default App;
