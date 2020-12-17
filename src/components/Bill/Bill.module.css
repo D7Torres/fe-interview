@@ -1,0 +1,36 @@
+.bill {
+  margin-bottom: 25px;
+}
+
+.billName {
+  /* Remove default button styles */
+  display: block;
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  text-transform: none;
+  border: 0;
+  background: transparent;
+
+  /* I could add outline: none, but is not recommended because of a11y */
+
+  cursor: pointer;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.transactions {
+  margin-left: 10px;
+}
+
+.transaction {
+  display: flex;
+  justify-content: space-between;
+  min-width: 160px;
+  max-width: 180px;
+  margin-bottom: 6px;
+}

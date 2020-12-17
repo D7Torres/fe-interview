@@ -2,7 +2,7 @@
 @value CleoBlueBright1: #335cff;
 @value CleoBlueBright2: #668fff;
 
-.tabsWrapper{
+.tabsWrapper {
   max-width: 700px;
 }
 
@@ -29,7 +29,8 @@
   color: white;
 }
 
-.tab.tabSelected { /* Overrieds .tab:hover with higher specificity */
+.tab.tabSelected {
+  /* Overrides .tab:hover with higher specificity */
   background-color: CleoBlue;
   color: white;
   font-weight: bold;

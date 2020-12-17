@@ -122,9 +122,7 @@ describe('Bills', () => {
 
   it('renders the bills passed', () => {
     BILLS.forEach((bill, index) => {
-      expect(wrapper.find('.bill').at(index).find('.billName').text()).toBe(
-        BILLS[index].name,
-      );
+      expect(wrapper.find('Bill').at(index).prop('bill')).toBe(bill);
     });
   });
 });
