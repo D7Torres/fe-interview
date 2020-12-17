@@ -60,6 +60,10 @@ describe('Bills', () => {
       wrapper.find('.billName').simulate('click');
     });
 
+    it('renders the count of transactions', () => {
+      expect(wrapper.find('.transactionsCount').text()).toBe('5');
+    });
+
     it('renders the transactions of the bills', () => {
       BILL.transactions.forEach((transaction, index) => {
         expect(

@@ -1,3 +1,5 @@
+@value CleoBlueBright2: #668fff;
+
 .bill {
   margin-bottom: 25px;
 }
@@ -21,6 +23,17 @@
   cursor: pointer;
   font-size: 22px;
   margin-bottom: 10px;
+}
+
+.transactionsCount {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  background-color: CleoBlueBright2;
+  margin-bottom: 6px;
 }
 
 .transactions {

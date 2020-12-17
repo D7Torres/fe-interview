@@ -19,6 +19,7 @@ const Bill = ({ bill }: BillProps) => {
       >
         {bill.name}
       </button>
+      <div className={css.transactionsCount}>{bill.transactions.length}</div>
       {areTransactionsVisible && (
         <div className={css.transactions}>
           {bill.transactions.map((transaction) => (
