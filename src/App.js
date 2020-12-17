@@ -1,11 +1,17 @@
 import React from 'react';
-import Tabs from './components/Tabs/Tabs.tsx';
+import { Provider } from 'react-redux';
+import { configureStore } from '@reduxjs/toolkit';
+import billsSlice from './domains/bills/slice';
+import AllBillsContainer from './components/AllBills/AlllBillsContainer.ts';
+
+const store = configureStore({
+  reducer: billsSlice.reducer,
+});
 
 const App = () => (
-  <Tabs tabNames={['Bills', 'Transactions']}>
-    <div>Tab 1 content</div>
-    <div>Tab 2 content</div>
-  </Tabs>
+  <Provider store={store}>
+    <AllBillsContainer />
+  </Provider>
 );
 
 export default App;

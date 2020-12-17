@@ -1,12 +1,8 @@
 import React from 'react';
 import { mount } from 'enzyme/build';
-import Tabs from './Tabs';
+import Tabs from './Tabs.tsx';
 
-const CHILDREN = [
-  <div>Child 1</div>,
-  <div>Child 2</div>,
-  <div>Child 3</div>,
-];
+const CHILDREN = [<div>Child 1</div>, <div>Child 2</div>, <div>Child 3</div>];
 
 describe('Tabs', () => {
   let wrapper;
@@ -66,17 +62,19 @@ describe('Tabs', () => {
       });
     });
 
-    describe.each([
-      [0], [1], [2],
-    ])('And a different tab than the first one is clicked', (tabIndex) => {
-      beforeEach(() => {
-        wrapper.find('.tab').at(tabIndex).simulate('click');
-      });
+    describe.each([[0], [1], [2]])(
+      'And a different tab than the first one is clicked',
+      (tabIndex) => {
+        beforeEach(() => {
+          wrapper.find('.tab').at(tabIndex).simulate('click');
+        });
 
-      it('renders the corresponding children', () => {
-        expect(wrapper.find('.contentWrapper').contains(CHILDREN[tabIndex]))
-          .toBe(true);
-      });
-    });
+        it('renders the corresponding children', () => {
+          expect(
+            wrapper.find('.contentWrapper').contains(CHILDREN[tabIndex]),
+          ).toBe(true);
+        });
+      },
+    );
   });
 });
