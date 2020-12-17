@@ -341,6 +341,13 @@ describe('AllBills', () => {
       wrapper = shallow(<AllBills bills={BILLS} fetchBills={getBills} />);
     });
 
+    it('renders the Tab component with the correct tab names', () => {
+      expect(wrapper.find('Tabs').prop('tabNames')).toBe([
+        'True Bills',
+        'Potential Bills',
+      ]);
+    });
+
     it('renders the true bills in the first tab of the Tab component', () => {
       const renderedBills = wrapper
         .find('Tabs')

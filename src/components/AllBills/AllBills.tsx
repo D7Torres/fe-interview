@@ -23,7 +23,7 @@ const AllBills = ({ bills, fetchBills }: AllBillsProps) => {
   const potentialBills = bills.filter((bill) => !bill.isBill);
 
   return (
-    <Tabs tabNames={['Bills', 'Transactions']}>
+    <Tabs tabNames={['True Bills', 'Potential Bills']}>
       <Bills bills={trueBills} />
       <Bills bills={potentialBills} />
     </Tabs>
